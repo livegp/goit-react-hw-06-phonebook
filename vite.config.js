@@ -10,7 +10,7 @@ import webfontDownload from 'vite-plugin-webfont-dl';
 import imagePresets, { widthPreset } from 'vite-plugin-image-presets';
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
 import zipPack from 'vite-plugin-zip-pack';
-import autoAlias from 'vite-plugin-auto-alias';
+// import autoAlias from 'vite-plugin-auto-alias';
 import { reactClickToComponent } from 'vite-plugin-react-click-to-component';
 
 // https://vitejs.dev/config/
@@ -23,7 +23,7 @@ export default defineConfig({
     VitePluginSvgSpritemap('./src/icons/*.svg'),
     webfontDownload(),
     zipPack(),
-    autoAlias({ mode: 'sync' }),
+    // autoAlias({ mode: 'sync' }),
     imagePresets({
       thumbnail: widthPreset({
         class: 'img thumb',
@@ -40,5 +40,5 @@ export default defineConfig({
     reactClickToComponent(),
     Icons()
   ],
-  base: '/goit-react-hw-05-movies/' // має відповідати шляху в index.jsx
+  base: '/goit-react-hw-06-phonebook/' // має відповідати шляху в index.jsx
 });

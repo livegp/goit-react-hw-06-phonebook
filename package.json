@@ -1,9 +1,9 @@
 {
-  "name": "goit-react-hw-05-movies",
+  "name": "goit-react-hw-06-phonebook",
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://livegp.github.io/goit-react-hw-05-movies/",
+  "homepage": "https://livegp.github.io/goit-react-hw-06-phonebook/",
   "scripts": {
     "start": "vite",
     "build": "vite build",
