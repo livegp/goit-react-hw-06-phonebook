@@ -1,37 +1,21 @@
-import { lazy, Suspense } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
-import ScrollToTop from 'react-scroll-up';
+import React from 'react';
 
-import { ScrollTopIcon } from '../GalleryList/GalleryList.styled';
-
-const Loader = lazy(() => import('../Loader/Loader'));
-const SharedLayout = lazy(() => import('../SharedLayout/SharedLayout'));
-const Home = lazy(() => import('../../pages/Home'));
-const Movies = lazy(() => import('../../pages/Movies'));
-const MoviesDetails = lazy(() => import('../../pages/MoviesDetails'));
-const Cast = lazy(() => import('../Cast/Cast'));
-const Reviews = lazy(() => import('../Reviews/Reviews'));
-// const NotFound = lazy(() => import('../../pages/NotFound'));
+import { Container, Section, SubTitle, Title } from './App.styled';
+import ContactForm from '../ContactForm/ContactForm';
+import ContactList from '../ContactList/ContactList';
+import Filter from '../Filter/Filter';
 
 function App() {
   return (
-    <Suspense fallback={<Loader />}>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
-          <Route path="movies" element={<Movies />} />
-          <Route path="movies/:id" element={<MoviesDetails />}>
-            <Route path="cast" element={<Cast />} />
-            <Route path="reviews" element={<Reviews />} />
-          </Route>
-          <Route path="*" element={<Navigate to="/" />} />
-          {/* <Route path="*" element={<NotFound />} /> */}
-        </Route>
-      </Routes>
-      <ScrollToTop showUnder={160}>
-        <ScrollTopIcon />
-      </ScrollToTop>
-    </Suspense>
+    <Container>
+      <Section>
+        <Title>Phonebook</Title>
+        <ContactForm />
+        <SubTitle>Contacts</SubTitle>
+        <Filter />
+        <ContactList />
+      </Section>
+    </Container>
   );
 }
 
