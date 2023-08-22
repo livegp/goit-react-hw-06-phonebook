@@ -3,7 +3,7 @@
   "extends": [
     "stylelint-config-styled-components",
     "stylelint-config-standard-scss",
-    "stylelint-config-idiomatic-order",
+    "stylelint-config-clean-order",
     "stylelint-config-prettier-scss"
   ],
   "rules": {
